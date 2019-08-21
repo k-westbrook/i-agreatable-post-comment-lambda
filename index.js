@@ -12,7 +12,7 @@ exports.handler = async function (event) {
     await client.connect();
     let results = await client.query(`INSERT INTO public."Comments"(
       restaurant_id, comment, name)
-      VALUES (${event.restaurant_id},${event.comment},${event.name} )`);
+      VALUES (${event.restaurant_id},'${event.comment}','${event.name}' );`);
 
 
     console.log(results)
