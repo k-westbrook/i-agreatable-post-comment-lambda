@@ -21,7 +21,7 @@ exports.handler = async function (event) {
         'Access-Control-Allow-Origin': '*'
       },
       status: 200,
-      body: JSON.stringify(results)
+      body: JSON.stringify(results.rows)
     };
     return response;
 
