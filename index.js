@@ -14,9 +14,6 @@ exports.handler = async function (event) {
       restaurant_id, comment, name)
       VALUES (${event.restaurant_id},'${event.comment}','${event.name}' );`);
 
-
-    console.log(results)
-
     let response =
     {
       headers: {
