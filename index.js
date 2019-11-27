@@ -13,7 +13,7 @@ exports.handler = async function (event) {
     let results = await client.query(`INSERT INTO public."Comments"(
       restaurant_id, comment, name)
       VALUES (${event.restaurant_id},'${event.comment}','${event.name}' )
-      RETURNING id;`);
+      RETURNING comment_id;`);
 
     let response =
     {
